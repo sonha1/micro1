@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.gtel</groupId>
-    <artifactId>product</artifactId>
+    <artifactId>shipping</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>product</name>
-    <description>product</description>
+    <name>shipping</name>
+    <description>shipping</description>
     <url/>
     <licenses>
         <license/>
@@ -125,7 +125,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>product-sv</finalName>
+        <finalName>shipping-sv</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

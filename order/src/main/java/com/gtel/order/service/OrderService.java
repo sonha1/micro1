@@ -4,9 +4,16 @@ import com.gtel.order.grpc.ProductGrpcClient;
 import com.gtel.order.models.dto.OrderItem;
 import com.gtel.order.models.request.CreateOrderRequest;
 import com.gtel.order.models.response.MainResponse;
+import com.gtel.order.utils.ApplicationException;
+import com.gtel.order.utils.ERROR_CODE;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+
+import javax.print.DocFlavor;
+import java.math.BigDecimal;
 
 @Service
 @Slf4j
@@ -15,19 +22,20 @@ public class OrderService {
     @Autowired
     ProductGrpcClient productGrpcClient;
 
-    public MainResponse<String> createOrder(CreateOrderRequest request){
+    public MainResponse<String> createOrder(CreateOrderRequest request) {
 
         MainResponse<String> response = new MainResponse<>();
 
         // STEP 1:: validate request
+        validateCreateOrderRequest(request);
 
         // step 2:  call grpc to product service check product is valid ?
 
-        for (OrderItem item : request.getItems()){
+        for (OrderItem item : request.getItems()) {
 
             boolean validateProduct = productGrpcClient.validateProduct(item.getProductId());
 
-            if (!validateProduct){
+            if (!validateProduct) {
 
                 response.setCode("400");
                 response.setMessage("PRODUCT NOT FOUND");
@@ -35,8 +43,11 @@ public class OrderService {
             }
         }
 
+
+
         // step  3:  total balance.
-          //  SUUM (so luong x price ) -> money
+        //  SUUM (so luong x price ) -> money
+        BigDecimal balance =
 
         // step 4: check user balance.
 
@@ -61,4 +72,17 @@ public class OrderService {
 
 
     // handle event shipping success/fail
+
+    private void validateCreateOrderRequest(CreateOrderRequest request) {
+        if (CollectionUtils.isEmpty(request.getItems())) {
+            throw new ApplicationException(ERROR_CODE.INVALID_REQUEST);
+        }
+
+        if (StringUtils.isEmpty(request.getAddress())
+                || StringUtils.isEmpty(request.getPhoneNumber())
+        ) {
+            throw new ApplicationException(ERROR_CODE.INVALID_REQUEST);
+
+        }
+    }
 }

@@ -5,6 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "product")
 @Data
@@ -16,4 +18,6 @@ public class ProductEntity {
     private String name;
 
     private int status;
+
+    private BigDecimal price;
 }
