@@ -6,13 +6,13 @@ import com.gtel.order.models.request.CreateOrderRequest;
 import com.gtel.order.models.response.MainResponse;
 import com.gtel.order.utils.ApplicationException;
 import com.gtel.order.utils.ERROR_CODE;
+import com.gtel.shipping.grpc.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import javax.print.DocFlavor;
 import java.math.BigDecimal;
 
 @Service
@@ -30,26 +30,25 @@ public class OrderService {
         validateCreateOrderRequest(request);
 
         // step 2:  call grpc to product service check product is valid ?
-
         for (OrderItem item : request.getItems()) {
-
             boolean validateProduct = productGrpcClient.validateProduct(item.getProductId());
-
             if (!validateProduct) {
-
                 response.setCode("400");
                 response.setMessage("PRODUCT NOT FOUND");
                 return response;
             }
         }
 
-
-
         // step  3:  total balance.
         //  SUUM (so luong x price ) -> money
-        BigDecimal balance =
+        BigDecimal balance = BigDecimal.ZERO;
+        for (OrderItem item : request.getItems()) {
+            ProductInfo product = productGrpcClient.getProduct(item.getProductId());
+            balance = balance.add((new BigDecimal(product.getPrice())).multiply(BigDecimal.valueOf(item.getTotalItems())));
+        }
 
         // step 4: check user balance.
+
 
         // step 5: check warehouse
 
@@ -82,7 +81,6 @@ public class OrderService {
                 || StringUtils.isEmpty(request.getPhoneNumber())
         ) {
             throw new ApplicationException(ERROR_CODE.INVALID_REQUEST);
-
         }
     }
 }

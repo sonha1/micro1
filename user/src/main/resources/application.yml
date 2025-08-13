@@ -1,0 +1,86 @@
+spring:
+  application:
+    name: qtud-sso
+  datasource:
+    url: jdbc:postgresql://192.168.5.70:5432/users?currentSchema=user
+    password: 123@123aA
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 25
+      minimum-idle: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+    jpa:
+      generate-ddl: false
+      hibernate.ddl-auto: none
+      open-in-view: false
+      show-sql: false
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: true
+          jdbc.batch_size: 1000
+          order_inserts: true
+          default_schema: user
+redis:
+  config-file:  E:\MICROSERVICE TUTORIAL\\qtud-sso-main\\config\\single.yaml
+logging:
+  level:
+    root: INFO
+system:
+  configurations:
+    cors:
+      allow-credentials: true
+      allowed-methods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+        - DELETE
+        - OPTIONS
+      allowed-header:
+        - Authorization
+        - Origin
+        - Content-Type
+        - Accept
+        - Accept-Encoding
+        - Accept-Language
+        - Access-Control-Allow-Origin
+        - Access-Control-Allow-Headers
+        - Access-Control-Request-Method
+        - X-Requested-With
+        - X-Auth-Token
+        - X-Xsrf-Token
+        - Cache-Control
+        - Id-Token
+      exposed-header:
+        - X-Xsrf-Token
+      url-based-pattern-cors-configuration-source: '/**'
+      allowed-origin-pattern:
+        - http://localhost:3000
+        - http://localhost:4200
+        - http://localhost:5173
+        - https://localhost:5173
+        - http://localhost:5173/
+        - https://localhost:5173/
+        - http://localhost:63342
+        - https://cainghien.gtelsoft.vn
+        - https://h1.gtelsoft.vn
+    uri-white-list:
+      - '/swagger-ui.html'
+      - '/swagger/*'
+      - '/swagger-ui/*'
+      - '/swagger/v3/api/docs'
+      - '/swagger/v3/api/docs/*'
+      - '/v3/api-docs'
+      - '/v3/api-docs/*'
+      - '/login'
+      - '/sign-up'
+      - '/public/**'
+      - '/introspect'
+      - '/actuator/**'
+grpc:
+  server:
+    port: 9091

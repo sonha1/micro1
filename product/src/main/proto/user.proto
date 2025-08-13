@@ -1,0 +1,30 @@
+syntax = "proto3";
+package com.gtel.microservice.product;
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.product.grpc";
+option java_outer_classname = "UserGrpc";
+
+service UserGrpcService {
+  rpc GetUserDetail(GetUserDetailGrpcRequest) returns(GetUserDetailGrpcResponse);
+}
+
+message GetUserDetailGrpcRequest {
+  int64 id = 1;
+}
+
+message GetUserDetailGrpcResponse {
+  int64 id = 1;
+  string username = 2;
+  string password = 3;
+  string email = 4;
+  string phoneNumber = 5;
+  string fullName = 6;
+  int32 status = 7;
+  string balance = 8;
+}
+
+
+
+

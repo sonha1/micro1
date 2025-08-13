@@ -1,5 +1,5 @@
-2025-07-16T21:43:49.867+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 12944 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:43:49.869+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:43:49.867+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 12944 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:43:49.869+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:43:50.614+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:43:50.615+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:43:50.638+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -40,11 +40,11 @@
 2025-07-16T21:43:55.940+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-16T21:43:56.029+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-16T21:43:56.039+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Started ProductApplication in 6.852 seconds (process running for 8.398)
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 6.852 seconds (process running for 8.398)
 2025-07-16T21:43:56.279+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:43:56.279+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:43:56.284+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 5 ms
@@ -53,8 +53,8 @@
 2025-07-16T21:44:24.524+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-16T21:44:24.527+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-16T21:44:24.539+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-16T21:44:29.087+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 18236 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:44:29.090+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:44:29.087+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 18236 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:44:29.090+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:44:29.943+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:44:29.944+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:44:29.972+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
@@ -95,11 +95,11 @@
 2025-07-16T21:44:35.912+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-16T21:44:35.995+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-16T21:44:36.005+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Started ProductApplication in 7.64 seconds (process running for 8.808)
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 7.64 seconds (process running for 8.808)
 2025-07-16T21:44:36.318+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:44:36.319+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:44:36.320+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 0 ms
@@ -108,8 +108,8 @@
 2025-07-16T21:45:54.458+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-16T21:45:54.462+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-16T21:45:54.476+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-16T21:46:59.228+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 47780 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:46:59.229+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:46:59.228+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 47780 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:46:59.229+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:47:00.246+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:47:00.246+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:47:00.268+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -175,11 +175,11 @@
 2025-07-16T21:47:08.460+0700 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - [] - []- [] - [] - Updating port to 8081
 2025-07-16T21:47:08.726+0700 INFO  c.netflix.discovery.DiscoveryClient - [] - []- [] - [] - DiscoveryClient_PRODUCT-SV/localhost:product-sv:8081 - registration status: 204
 2025-07-16T21:47:09.472+0700 INFO  o.s.cloud.commons.util.InetUtils - [] - []- [] - [] - Cannot determine local hostname
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:47:09.488+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Started ProductApplication in 12.008 seconds (process running for 13.661)
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:47:09.488+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 12.008 seconds (process running for 13.661)
 2025-07-16T21:47:09.641+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:47:09.641+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:47:09.643+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms
@@ -212,8 +212,8 @@
 2025-07-16T21:48:12.296+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-16T21:48:12.311+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
 2025-07-16T21:48:12.312+0700 INFO  c.netflix.discovery.DiscoveryClient - [] - []- [] - [] - Shutting down DiscoveryClient ...
-2025-07-16T22:28:46.422+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 45500 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T22:28:46.424+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T22:28:46.422+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 45500 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T22:28:46.424+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T22:28:47.200+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T22:28:47.201+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T22:28:47.245+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
@@ -222,7 +222,7 @@
 2025-07-16T22:28:48.171+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 274 ms. Found 1 JPA repository interface.
 2025-07-16T22:28:48.179+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T22:28:48.181+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2025-07-16T22:28:48.187+0700 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - [] - []- [] - [] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gtel.product.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-16T22:28:48.187+0700 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - [] - []- [] - [] - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.gtel.shipping.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2025-07-16T22:28:48.187+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
 2025-07-16T22:28:48.375+0700 INFO  o.s.cloud.context.scope.GenericScope - [] - []- [] - [] - BeanFactory id=ef99c6a5-32fe-34e0-8420-a2a80cb6968d
 2025-07-16T22:28:48.892+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat initialized with port 8081 (http)
@@ -283,15 +283,15 @@
 2025-07-16T22:28:57.245+0700 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - [] - []- [] - [] - Updating port to 8081
 2025-07-16T22:28:57.285+0700 INFO  c.netflix.discovery.DiscoveryClient - [] - []- [] - [] - DiscoveryClient_PRODUCT-SV/localhost:product-sv:8081 - registration status: 204
 2025-07-16T22:28:58.270+0700 INFO  o.s.cloud.commons.util.InetUtils - [] - []- [] - [] - Cannot determine local hostname
-2025-07-16T22:28:58.387+0700 INFO  n.d.b.g.s.s.AbstractGrpcServerFactory - [] - []- [] - [] - Registered gRPC service: com.gtel.microservice.product.ProductGrpcService, bean: productGrpcImpl, class: com.gtel.product.grpc.ProductGrpcImpl
+2025-07-16T22:28:58.387+0700 INFO  n.d.b.g.s.s.AbstractGrpcServerFactory - [] - []- [] - [] - Registered gRPC service: com.gtel.microservice.product.ProductGrpcService, bean: productGrpcImpl, class: com.gtel.shipping.grpc.ProductGrpcImpl
 2025-07-16T22:28:58.387+0700 INFO  n.d.b.g.s.s.AbstractGrpcServerFactory - [] - []- [] - [] - Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
 2025-07-16T22:28:58.387+0700 INFO  n.d.b.g.s.s.AbstractGrpcServerFactory - [] - []- [] - [] - Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
 2025-07-16T22:28:58.568+0700 INFO  n.d.b.g.s.s.GrpcServerLifecycle - [] - []- [] - [] - gRPC Server started, listening on address: *, port: 9090
-2025-07-16T22:28:58.590+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T22:28:58.590+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T22:28:58.590+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T22:28:58.590+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-16T22:28:58.591+0700 INFO  com.gtel.product.ProductApplication - [] - []- [] - [] - Started ProductApplication in 13.787 seconds (process running for 15.028)
+2025-07-16T22:28:58.590+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T22:28:58.590+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T22:28:58.590+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T22:28:58.590+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
+2025-07-16T22:28:58.591+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 13.787 seconds (process running for 15.028)
 2025-07-16T22:28:59.110+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T22:28:59.110+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T22:28:59.117+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 5 ms
