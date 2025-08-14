@@ -1,5 +1,5 @@
-2025-07-03T22:56:05.145+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 25860 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T22:56:05.147+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T22:56:05.145+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 25860 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T22:56:05.147+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T22:56:05.971+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T22:56:05.971+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T22:56:05.991+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -15,7 +15,7 @@
 2025-07-03T22:56:07.641+0700 INFO  o.a.catalina.core.StandardEngine - [] - []- [] - [] - Starting Servlet engine: [Apache Tomcat/10.1.42]
 2025-07-03T22:56:07.707+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring embedded WebApplicationContext
 2025-07-03T22:56:07.707+0700 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [] - []- [] - [] - Root WebApplicationContext: initialization completed in 2491 ms
-2025-07-03T22:56:07.853+0700 ERROR o.s.b.w.e.tomcat.TomcatStarter - [] - []- [] - [] - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'corsFilter' defined in class path resource [com/gtel/product/configs/CorsFilterConfiguration.class]: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.shipping.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.shipping.configs.SystemPropertyConfiguration.getCors()" is null
+2025-07-03T22:56:07.853+0700 ERROR o.s.b.w.e.tomcat.TomcatStarter - [] - []- [] - [] - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'corsFilter' defined in class path resource [com/gtel/product/configs/CorsFilterConfiguration.class]: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.warehouse.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.warehouse.configs.SystemPropertyConfiguration.getCors()" is null
 2025-07-03T22:56:07.898+0700 INFO  o.a.catalina.core.StandardService - [] - []- [] - [] - Stopping service [Tomcat]
 2025-07-03T22:56:07.910+0700 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - [] - []- [] - [] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
 2025-07-03T22:56:07.926+0700 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - [] - []- [] - [] - 
@@ -31,7 +31,7 @@ org.springframework.context.ApplicationContextException: Unable to start web ser
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.gtel.shipping.ProductApplication.main(ProductApplication.java:15)
+	at com.gtel.warehouse.PaymentApplication.main(ProductApplication.java:15)
 Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
@@ -40,7 +40,7 @@ Caused by: org.springframework.boot.web.server.WebServerException: Unable to sta
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
 	... 8 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsFilter' defined in class path resource [com/gtel/product/configs/CorsFilterConfiguration.class]: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.shipping.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.shipping.configs.SystemPropertyConfiguration.getCors()" is null
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'corsFilter' defined in class path resource [com/gtel/product/configs/CorsFilterConfiguration.class]: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.warehouse.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.warehouse.configs.SystemPropertyConfiguration.getCors()" is null
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
@@ -86,25 +86,25 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438)
 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
 	... 13 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.shipping.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.shipping.configs.SystemPropertyConfiguration.getCors()" is null
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.filter.CorsFilter]: Factory method 'corsFilter' threw exception with message: Cannot invoke "com.gtel.warehouse.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.warehouse.configs.SystemPropertyConfiguration.getCors()" is null
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	... 56 common frames omitted
-Caused by: java.lang.NullPointerException: Cannot invoke "com.gtel.shipping.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.shipping.configs.SystemPropertyConfiguration.getCors()" is null
-	at com.gtel.shipping.configs.CorsFilterConfiguration.corsFilter(CorsFilterConfiguration.java:20)
-	at com.gtel.shipping.configs.CorsFilterConfiguration$$SpringCGLIB$$0.CGLIB$corsFilter$0(<generated>)
-	at com.gtel.shipping.configs.CorsFilterConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.gtel.warehouse.configs.SystemPropertyConfiguration$CorsProperty.allowedOriginPattern()" because the return value of "com.gtel.warehouse.configs.SystemPropertyConfiguration.getCors()" is null
+	at com.gtel.warehouse.configs.CorsFilterConfiguration.corsFilter(CorsFilterConfiguration.java:20)
+	at com.gtel.warehouse.configs.CorsFilterConfiguration$$SpringCGLIB$$0.CGLIB$corsFilter$0(<generated>)
+	at com.gtel.warehouse.configs.CorsFilterConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:400)
-	at com.gtel.shipping.configs.CorsFilterConfiguration$$SpringCGLIB$$0.corsFilter(<generated>)
+	at com.gtel.warehouse.configs.CorsFilterConfiguration$$SpringCGLIB$$0.corsFilter(<generated>)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
 	... 59 common frames omitted
-2025-07-03T22:56:58.915+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 34120 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T22:56:58.917+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T22:56:58.915+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 34120 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T22:56:58.917+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T22:56:59.547+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T22:56:59.548+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T22:56:59.567+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -145,11 +145,11 @@ Caused by: java.lang.NullPointerException: Cannot invoke "com.gtel.shipping.conf
 2025-07-03T22:57:04.443+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T22:57:04.531+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T22:57:04.543+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T22:57:04.565+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T22:57:04.565+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T22:57:04.565+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T22:57:04.565+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T22:57:04.565+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 6.195 seconds (process running for 7.105)
+2025-07-03T22:57:04.565+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T22:57:04.565+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T22:57:04.565+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T22:57:04.565+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T22:57:04.565+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 6.195 seconds (process running for 7.105)
 2025-07-03T22:57:04.896+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T22:57:04.897+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T22:57:04.898+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 1 ms
@@ -158,8 +158,8 @@ Caused by: java.lang.NullPointerException: Cannot invoke "com.gtel.shipping.conf
 2025-07-03T22:57:22.709+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-03T22:57:22.711+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-03T22:57:22.726+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-03T22:57:31.556+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 40432 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T22:57:31.560+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T22:57:31.556+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 40432 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T22:57:31.560+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T22:57:32.315+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T22:57:32.316+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T22:57:32.335+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -200,11 +200,11 @@ Caused by: java.lang.NullPointerException: Cannot invoke "com.gtel.shipping.conf
 2025-07-03T22:57:37.206+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T22:57:37.291+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T22:57:37.301+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T22:57:37.314+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T22:57:37.315+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T22:57:37.315+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T22:57:37.315+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T22:57:37.315+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 6.445 seconds (process running for 7.5)
+2025-07-03T22:57:37.314+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T22:57:37.315+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T22:57:37.315+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T22:57:37.315+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T22:57:37.315+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 6.445 seconds (process running for 7.5)
 2025-07-03T22:57:37.931+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T22:57:37.931+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T22:57:37.934+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms
@@ -299,7 +299,7 @@ org.springframework.security.authentication.AuthenticationServiceException: 500 
 Caused by: org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionException: 500  on POST request for "http://localhost:8080/introspect": [no body]
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.makeRequest(SpringOpaqueTokenIntrospector.java:159)
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.introspect(SpringOpaqueTokenIntrospector.java:137)
-	at com.gtel.shipping.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
+	at com.gtel.warehouse.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
 	at org.springframework.security.oauth2.server.resource.authentication.OpaqueTokenAuthenticationProvider.getOAuth2AuthenticatedPrincipal(OpaqueTokenAuthenticationProvider.java:124)
 	... 85 common frames omitted
 Caused by: org.springframework.web.client.HttpServerErrorException$InternalServerError: 500  on POST request for "http://localhost:8080/introspect": [no body]
@@ -402,7 +402,7 @@ org.springframework.security.authentication.AuthenticationServiceException: 500 
 Caused by: org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionException: 500  on POST request for "http://localhost:8080/introspect": [no body]
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.makeRequest(SpringOpaqueTokenIntrospector.java:159)
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.introspect(SpringOpaqueTokenIntrospector.java:137)
-	at com.gtel.shipping.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
+	at com.gtel.warehouse.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
 	at org.springframework.security.oauth2.server.resource.authentication.OpaqueTokenAuthenticationProvider.getOAuth2AuthenticatedPrincipal(OpaqueTokenAuthenticationProvider.java:124)
 	... 85 common frames omitted
 Caused by: org.springframework.web.client.HttpServerErrorException$InternalServerError: 500  on POST request for "http://localhost:8080/introspect": [no body]
@@ -505,7 +505,7 @@ org.springframework.security.authentication.AuthenticationServiceException: 500 
 Caused by: org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionException: 500  on POST request for "http://localhost:8080/introspect": [no body]
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.makeRequest(SpringOpaqueTokenIntrospector.java:159)
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.introspect(SpringOpaqueTokenIntrospector.java:137)
-	at com.gtel.shipping.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
+	at com.gtel.warehouse.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
 	at org.springframework.security.oauth2.server.resource.authentication.OpaqueTokenAuthenticationProvider.getOAuth2AuthenticatedPrincipal(OpaqueTokenAuthenticationProvider.java:124)
 	... 85 common frames omitted
 Caused by: org.springframework.web.client.HttpServerErrorException$InternalServerError: 500  on POST request for "http://localhost:8080/introspect": [no body]
@@ -522,8 +522,8 @@ Caused by: org.springframework.web.client.HttpServerErrorException$InternalServe
 2025-07-03T23:02:04.271+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-03T23:02:04.272+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-03T23:02:04.282+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-03T23:02:09.787+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 33560 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T23:02:09.789+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T23:02:09.787+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 33560 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T23:02:09.789+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T23:02:10.446+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T23:02:10.446+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T23:02:10.467+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -564,11 +564,11 @@ Caused by: org.springframework.web.client.HttpServerErrorException$InternalServe
 2025-07-03T23:02:14.955+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T23:02:15.038+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T23:02:15.047+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T23:02:15.061+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:02:15.061+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T23:02:15.061+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T23:02:15.061+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:02:15.061+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 5.811 seconds (process running for 6.702)
+2025-07-03T23:02:15.061+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:02:15.061+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T23:02:15.061+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T23:02:15.061+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:02:15.061+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 5.811 seconds (process running for 6.702)
 2025-07-03T23:02:15.316+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T23:02:15.316+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T23:02:15.318+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms
@@ -583,7 +583,7 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 	at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
-	at com.gtel.shipping.controllers.TestController$$SpringCGLIB$$0.sayHello(<generated>)
+	at com.gtel.warehouse.controllers.TestController$$SpringCGLIB$$0.sayHello(<generated>)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
@@ -727,8 +727,8 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:04:45.770+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-03T23:04:45.774+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-03T23:04:45.785+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-03T23:04:53.143+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 43580 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T23:04:53.145+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T23:04:53.143+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 43580 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T23:04:53.145+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T23:04:53.896+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T23:04:53.896+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T23:04:53.914+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
@@ -769,11 +769,11 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:04:58.523+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T23:04:58.606+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T23:04:58.620+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T23:04:58.634+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:04:58.634+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T23:04:58.634+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T23:04:58.634+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:04:58.634+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 6.32 seconds (process running for 7.512)
+2025-07-03T23:04:58.634+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:04:58.634+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T23:04:58.634+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T23:04:58.634+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:04:58.634+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 6.32 seconds (process running for 7.512)
 2025-07-03T23:04:58.771+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T23:04:58.772+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T23:04:58.776+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 4 ms
@@ -783,8 +783,8 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:08:08.860+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-03T23:08:08.862+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-03T23:08:08.878+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-03T23:08:14.347+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 2388 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T23:08:14.348+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T23:08:14.347+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 2388 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T23:08:14.348+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T23:08:14.958+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T23:08:14.959+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T23:08:14.978+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
@@ -825,11 +825,11 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:08:19.582+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T23:08:19.666+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T23:08:19.676+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T23:08:19.695+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:08:19.696+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T23:08:19.698+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T23:08:19.698+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:08:19.699+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 5.901 seconds (process running for 6.939)
+2025-07-03T23:08:19.695+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:08:19.696+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T23:08:19.698+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T23:08:19.698+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:08:19.699+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 5.901 seconds (process running for 6.939)
 2025-07-03T23:08:20.227+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T23:08:20.227+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T23:08:20.229+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms
@@ -838,8 +838,8 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:09:42.671+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-03T23:09:42.673+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-03T23:09:42.685+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-03T23:09:46.452+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 17120 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-03T23:09:46.453+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-03T23:09:46.452+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 17120 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-03T23:09:46.453+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-03T23:09:47.093+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-03T23:09:47.093+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-03T23:09:47.115+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
@@ -880,11 +880,11 @@ org.springframework.security.authorization.AuthorizationDeniedException: Access 
 2025-07-03T23:09:51.629+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-03T23:09:51.724+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-03T23:09:51.734+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-03T23:09:51.748+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:09:51.748+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-03T23:09:51.748+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-03T23:09:51.748+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - ==================================================
-2025-07-03T23:09:51.749+0700 INFO  com.gtel.shipping.ProductApplication - [] - []- [] - [] - Started ProductApplication in 5.861 seconds (process running for 6.862)
+2025-07-03T23:09:51.748+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:09:51.748+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-03T23:09:51.748+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-03T23:09:51.748+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-03T23:09:51.749+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 5.861 seconds (process running for 6.862)
 2025-07-03T23:09:52.327+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-03T23:09:52.328+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-03T23:09:52.330+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms
@@ -979,7 +979,7 @@ org.springframework.security.authentication.AuthenticationServiceException: 401 
 Caused by: org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionException: 401  on POST request for "http://localhost:8080/introspect": [no body]
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.makeRequest(SpringOpaqueTokenIntrospector.java:159)
 	at org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.introspect(SpringOpaqueTokenIntrospector.java:137)
-	at com.gtel.shipping.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
+	at com.gtel.warehouse.configs.CustomAuthoritiesOpaqueTokenIntrospector.introspect(CustomAuthoritiesOpaqueTokenIntrospector.java:26)
 	at org.springframework.security.oauth2.server.resource.authentication.OpaqueTokenAuthenticationProvider.getOAuth2AuthenticatedPrincipal(OpaqueTokenAuthenticationProvider.java:124)
 	... 85 common frames omitted
 Caused by: org.springframework.web.client.HttpClientErrorException$Unauthorized: 401  on POST request for "http://localhost:8080/introspect": [no body]

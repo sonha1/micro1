@@ -1,0 +1,29 @@
+syntax = "proto3";
+package com.gtel.microservice.warehouse;
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.warehouse.grpc";
+option java_outer_classname = "WarehouseGrpc";
+
+service WarehouseGrpcService {
+  rpc CreateStockTransaction(CreateWarehouseStockTransactionRequest) returns (CreateWarehouseStockTransactionResponse);
+  rpc UpdateStockTransaction(UpdateWarehouseStockTransactionRequest) returns (google.protobuf.Empty);
+}
+
+message CreateWarehouseStockTransactionRequest {
+  int64 productId = 1;
+  int32 quantity = 2;
+  optional string note = 3;
+}
+
+message CreateWarehouseStockTransactionResponse {
+  int64 stockTransactionId = 1;
+}
+
+message UpdateWarehouseStockTransactionRequest {
+  int64 stockTransactionId = 1;
+  bool success = 2;
+  optional string note = 3;
+}

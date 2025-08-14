@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.gtel.microservice.payment;
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.payment.grpc";
+option java_outer_classname = "BillGrpc";
+
+service BillGrpcService {
+  rpc CreateBill (CreateBillRequest) returns (CreateBillResponse);
+}
+
+message CreateBillRequest {
+  int64 userId = 1 ;
+  string totalAmount = 2;
+  int64 orderId = 3;
+}
+
+message CreateBillResponse {
+  string message = 1;
+}

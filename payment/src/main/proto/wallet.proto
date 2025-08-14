@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.gtel.microservice.payment;
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.payment.grpc";
+option java_outer_classname = "WalletGrpc";
+
+service WalletGrpcService {
+  rpc GetWalletDetail (GetWalletDetailRequest) returns (GetWalletDetailResponse);
+}
+
+message GetWalletDetailRequest {
+  int64 userId = 1;
+}
+
+message GetWalletDetailResponse {
+  int64 id = 1 ;
+  string balance = 2;
+  int64 userId = 3;
+}
+

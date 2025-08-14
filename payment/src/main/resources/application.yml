@@ -100,3 +100,6 @@ eureka:
       defaultZone: ${EUREKA_URI:http://192.168.5.51:8761/eureka}
   instance:
     preferIpAddress: true
+grpc:
+  server:
+    port: 9092
