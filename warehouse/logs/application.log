@@ -1,5 +1,5 @@
-2025-07-16T21:43:49.867+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 12944 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:43:49.869+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:43:49.867+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 12944 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:43:49.869+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:43:50.614+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:43:50.615+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:43:50.638+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -40,11 +40,11 @@
 2025-07-16T21:43:55.940+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-16T21:43:56.029+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-16T21:43:56.039+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:43:56.054+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 6.852 seconds (process running for 8.398)
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:43:56.054+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 6.852 seconds (process running for 8.398)
 2025-07-16T21:43:56.279+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:43:56.279+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:43:56.284+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 5 ms
@@ -53,8 +53,8 @@
 2025-07-16T21:44:24.524+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-16T21:44:24.527+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-16T21:44:24.539+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-16T21:44:29.087+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 18236 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:44:29.090+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:44:29.087+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 18236 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:44:29.090+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:44:29.943+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:44:29.944+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:44:29.972+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
@@ -95,11 +95,11 @@
 2025-07-16T21:44:35.912+0700 INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - [] - []- [] - [] - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
 2025-07-16T21:44:35.995+0700 INFO  o.a.coyote.http11.Http11NioProtocol - [] - []- [] - [] - Starting ProtocolHandler ["http-nio-8081"]
 2025-07-16T21:44:36.005+0700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - [] - []- [] - [] - Tomcat started on port 8081 (http) with context path '/'
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:44:36.019+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 7.64 seconds (process running for 8.808)
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:44:36.019+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 7.64 seconds (process running for 8.808)
 2025-07-16T21:44:36.318+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:44:36.319+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:44:36.320+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 0 ms
@@ -108,8 +108,8 @@
 2025-07-16T21:45:54.458+0700 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - [] - []- [] - [] - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-16T21:45:54.462+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown initiated...
 2025-07-16T21:45:54.476+0700 INFO  com.zaxxer.hikari.HikariDataSource - [] - []- [] - [] - HikariPool-1 - Shutdown completed.
-2025-07-16T21:46:59.228+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 47780 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
-2025-07-16T21:46:59.229+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
+2025-07-16T21:46:59.228+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Starting ProductApplication using Java 21.0.6 with PID 47780 (E:\MICROSERVICE TUTORIAL\product\target\classes started by Vuanh in E:\MICROSERVICE TUTORIAL\product)
+2025-07-16T21:46:59.229+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - No active profile set, falling back to 1 default profile: "default"
 2025-07-16T21:47:00.246+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Multiple Spring Data modules found, entering strict repository configuration mode
 2025-07-16T21:47:00.246+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2025-07-16T21:47:00.268+0700 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - [] - []- [] - [] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
@@ -175,11 +175,11 @@
 2025-07-16T21:47:08.460+0700 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - [] - []- [] - [] - Updating port to 8081
 2025-07-16T21:47:08.726+0700 INFO  c.netflix.discovery.DiscoveryClient - [] - []- [] - [] - DiscoveryClient_PRODUCT-SV/localhost:product-sv:8081 - registration status: 204
 2025-07-16T21:47:09.472+0700 INFO  o.s.cloud.commons.util.InetUtils - [] - []- [] - [] - Cannot determine local hostname
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
-2025-07-16T21:47:09.487+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - ==================================================
-2025-07-16T21:47:09.488+0700 INFO  com.gtel.warehouse.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 12.008 seconds (process running for 13.661)
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               GTEL Application                  |
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - |               Develop by Gtel Team              |
+2025-07-16T21:47:09.487+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - ==================================================
+2025-07-16T21:47:09.488+0700 INFO  com.gtel.shipping.PaymentApplication - [] - []- [] - [] - Started ProductApplication in 12.008 seconds (process running for 13.661)
 2025-07-16T21:47:09.641+0700 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - [] - []- [] - [] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16T21:47:09.641+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Initializing Servlet 'dispatcherServlet'
 2025-07-16T21:47:09.643+0700 INFO  o.s.web.servlet.DispatcherServlet - [] - []- [] - [] - Completed initialization in 2 ms

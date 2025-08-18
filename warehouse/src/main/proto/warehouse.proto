@@ -16,6 +16,7 @@ message CreateWarehouseStockTransactionRequest {
   int64 productId = 1;
   int32 quantity = 2;
   optional string note = 3;
+  int64 userId = 4;
 }
 
 message CreateWarehouseStockTransactionResponse {

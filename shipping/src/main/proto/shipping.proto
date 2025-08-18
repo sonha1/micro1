@@ -1,0 +1,33 @@
+syntax = "proto3";
+package com.gtel.microservice.shipping;
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.shipping.grpc";
+option java_outer_classname = "ShippingGrpc";
+
+service ShippingGrpcService {
+  rpc CreateShipping (CreateShippingRequest) returns (CreateShippingResponse);
+  rpc UpdateShippingStatus (UpdateShippingStatusRequest) returns (UpdateShippingStatusResponse);
+
+}
+
+message CreateShippingRequest {
+  int64 orderId =1 ;
+  string address = 2;
+  string method = 3;
+
+}
+
+message CreateShippingResponse {
+
+}
+
+
+message UpdateShippingStatusRequest {
+
+}
+
+message UpdateShippingStatusResponse {
+
+}

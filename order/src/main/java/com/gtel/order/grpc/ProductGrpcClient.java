@@ -3,14 +3,14 @@ package com.gtel.order.grpc;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Component;
-import com.gtel.warehouse.grpc.*;
+import com.gtel.shipping.grpc.*;
 
 @Component
 @Slf4j
 public class ProductGrpcClient {
 
     @GrpcClient("product")
-    com.gtel.warehouse.grpc.ProductGrpcServiceGrpc.ProductGrpcServiceBlockingStub stub;
+    com.gtel.shipping.grpc.ProductGrpcServiceGrpc.ProductGrpcServiceBlockingStub stub;
 
     public boolean validateProduct(long productId){
             GetProductInfoRequest request = GetProductInfoRequest
