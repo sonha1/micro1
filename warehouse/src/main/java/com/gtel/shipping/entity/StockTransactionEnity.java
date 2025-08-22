@@ -21,6 +21,4 @@ public class StockTransactionEnity extends BaseEntity{
     private String note;
     @Column(name = "user_id")
     private Long userId;
-    @Column(name = "status")
-    private Integer status;
 }

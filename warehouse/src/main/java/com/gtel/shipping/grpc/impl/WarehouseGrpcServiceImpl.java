@@ -17,6 +17,7 @@ import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.grpc.server.service.GrpcService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -39,7 +40,6 @@ public class WarehouseGrpcServiceImpl extends WarehouseGrpcServiceGrpc.Warehouse
         StockTransactionEnity stockTransaction = stockTransactionOptional.get();
 
         StockTransactionStatus status = request.getSuccess() ? StockTransactionStatus.SUCCESS : StockTransactionStatus.FAILED;
-        stockTransaction.setStatus(status.getValue());
         stockTransactionRepository.save(stockTransaction);
 
         responseObserver.onNext(Empty.getDefaultInstance());
@@ -47,6 +47,7 @@ public class WarehouseGrpcServiceImpl extends WarehouseGrpcServiceGrpc.Warehouse
     }
 
     @Override
+    @Transactional
     public void createStockTransaction(CreateWarehouseStockTransactionRequest request, StreamObserver<CreateWarehouseStockTransactionResponse> responseObserver) {
         // lock stock for this product
 
@@ -68,7 +69,6 @@ public class WarehouseGrpcServiceImpl extends WarehouseGrpcServiceGrpc.Warehouse
         stockTransaction.setNote("Buy product action");
         stockTransaction.setUserId(request.getUserId());
         stockTransaction.setAction(StockTransactionAction.EXPORT);
-        stockTransaction.setStatus(StockTransactionStatus.PENDING.getValue());
         stockTransactionRepository.save(stockTransaction);
 
         responseObserver.onNext(CreateWarehouseStockTransactionResponse.newBuilder().setStockTransactionId(stockTransaction.getId()).build());
