@@ -47,6 +47,11 @@ spring:
     exchanges:
       create-order-failure: create_order_failure.exchange
       handle-warehouse-success: handle_warehouse_success.exchange
+    listener:
+      simple:
+        retry:
+          enabled: false
+        acknowledge-mode: auto
 redis:
   config-file:  E:\MICROSERVICE TUTORIAL\\product\\config\\single.yaml
 logging:
