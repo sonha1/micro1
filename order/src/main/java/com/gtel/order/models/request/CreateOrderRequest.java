@@ -9,9 +9,11 @@ import java.util.List;
 public class CreateOrderRequest {
     private List<OrderItem> items;
 
-    private long shippingMethod;
+    private Long shippingMethod;
 
     private String address;
 
     private String phoneNumber;
+
+    private String note;
 }

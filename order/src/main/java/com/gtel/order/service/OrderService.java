@@ -1,12 +1,13 @@
 package com.gtel.order.service;
 
-import com.gtel.order.grpc.ProductGrpcClient;
+import com.gtel.order.grpc.client.ProductGrpcClient;
 import com.gtel.order.models.dto.OrderItem;
 import com.gtel.order.models.request.CreateOrderRequest;
+import com.gtel.order.models.response.GetOrderDetailResponse;
 import com.gtel.order.models.response.MainResponse;
 import com.gtel.order.utils.ApplicationException;
 import com.gtel.order.utils.ERROR_CODE;
-import com.gtel.warehouse.grpc.ProductInfo;
+import com.gtel.product.grpc.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,7 @@ public class OrderService {
         BigDecimal balance = BigDecimal.ZERO;
         for (OrderItem item : request.getItems()) {
             ProductInfo product = productGrpcClient.getProduct(item.getProductId());
-            balance = balance.add((new BigDecimal(product.getPrice())).multiply(BigDecimal.valueOf(item.getTotalItems())));
+            balance = balance.add((new BigDecimal(product.getPrice())).multiply(BigDecimal.valueOf(item.getQuantity())));
         }
 
         // step 4: check user balance.
@@ -83,4 +84,5 @@ public class OrderService {
             throw new ApplicationException(ERROR_CODE.INVALID_REQUEST);
         }
     }
+
 }

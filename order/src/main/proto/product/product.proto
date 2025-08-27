@@ -7,11 +7,8 @@ option java_package = "com.gtel.product.grpc";
 option java_outer_classname = "ProductGrpc";
 
 service ProductGrpcService {
-  rpc getProductInfo(GetProductInfoRequest) returns (GetProductResponse){
-
-  }
+  rpc getProductInfo(GetProductInfoRequest) returns (GetProductResponse);
 }
-
 
 message GetProductInfoRequest{
   int64 productId = 1;
@@ -20,11 +17,10 @@ message GetProductInfoRequest{
 message GetProductResponse{
   int32 code = 1;
   string message = 2;
-
   ProductInfo product = 3;
 }
 
-message ProductInfo{
+message ProductInfo {
   int64  productId = 1;
   string name = 2;
   int32 status = 3;
