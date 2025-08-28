@@ -35,8 +35,25 @@ spring:
           jdbc.batch_size: 1000
           order_inserts: true
           default_schema: public
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sontk
+    password: sontk
+    queues:
+      handle-warehouse-success: handle_warehouse_success.queue
+    routing-keys:
+      handle-payment-success: handle_payment_success.routing
+    exchanges:
+      create-order-failure: create_order_failure.exchange
+      handle-payment-success: handle_payment_success.exchange
+    listener:
+      simple:
+        retry:
+          enabled: false
+        acknowledge-mode: auto
 redis:
-  config-file:  E:\MICROSERVICE TUTORIAL\\product\\config\\single.yaml
+  config-file: E:\MICROSERVICE TUTORIAL\\product\\config\\single.yaml
 logging:
   level:
     root: INFO

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package com.gtel.microservice.shipping;
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.shipping.grpc";
+option java_outer_classname = "ShippingGrpc";
+
+service ShippingGrpcService {
+  rpc GetShippingMethodDetail (GetShippingMethodRequest) returns (GetShippingMethodResponse);
+}
+
+message GetShippingMethodRequest {
+  int64 shippingMethodId = 1;
+}
+
+message GetShippingMethodResponse {
+  string code = 1;
+  string name = 2;
+  bool isActive = 3;
+  string fee = 4;
+  string provider = 5;
+}

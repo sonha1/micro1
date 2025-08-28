@@ -1,0 +1,36 @@
+syntax = "proto3";
+package com.gtel.microservice.warehouse;
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+
+option java_package = "com.gtel.order.grpc";
+option java_outer_classname = "OrderGrpc";
+
+service OrderGrpcService {
+  rpc GetOrderDetail(GetOrderDetailRequestGrpc) returns (GetOrderDetailResponseGrpc);
+}
+
+message GetOrderDetailRequestGrpc {
+  int64 orderId = 1;
+}
+
+message GetOrderDetailResponseGrpc {
+  int64 id = 1;
+  int64 userId = 2;
+  int32 status = 3;
+  repeated OrderItemGrpc items = 4;
+  string totalAmount = 5;
+  string totalPrice = 6;
+  string totalFee = 7;
+  string note = 8;
+  string address = 9;
+  string phoneNumber = 10;
+}
+
+message OrderItemGrpc {
+  int64 productId = 1;
+  int32 quantity  = 2;
+}
+
+
